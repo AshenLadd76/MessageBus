@@ -1,4 +1,4 @@
-\# MessageBus
+# MessageBus
 
 
 
@@ -10,19 +10,19 @@ A lightweight, generic message bus for broadcasting events in Unity.
 
 
 
-\## Features
+## Features
 
 
 
-\- Centralized, static event hub.
+- Centralized, static event hub.
 
-\- Supports \*\*0 to 3 parameters\*\* per event.
+- Supports **0 to 3 parameters** per event.
 
-\- Prevents duplicate subscriptions.
+- Prevents duplicate subscriptions.
 
-\- Optional \*\*tracing/logging\*\* for debugging.
+- Optional **tracing/logging** for debugging.
 
-\- Auto-clears all listeners on domain reload (editor/play mode).
+- Auto-clears all listeners on domain reload (editor/play mode).
 
 
 
@@ -30,7 +30,7 @@ A lightweight, generic message bus for broadcasting events in Unity.
 
 
 
-\## Installation
+## Installation
 
 
 
@@ -40,13 +40,13 @@ Add this to your Unity project `Packages/manifest.json`:
 
 ```json
 
-"com.ashenladd.messagebus": "https://gist.github.com/YOUR\_GIST\_ID.git"
+"com.ashenladd.messagebus": "https://gist.github.com/YOUR_GIST_ID.git"
 
 ```
 
 
 
-\## Usage
+## Usage
 
 
 
@@ -64,11 +64,11 @@ using ToolBox.Messaging;
 
 
 
-\## Adding Listeners
+## Adding Listeners
 
 
 
-\### Add a listener for an event by specifying the event name and a callback method. The callback can take 0–3 parameters of any type:
+### Add a listener for an event by specifying the event name and a callback method. The callback can take 0–3 parameters of any type:
 
 
 
@@ -102,7 +102,7 @@ MessageBus.AddListener<string, int, bool>("OnEnemyDefeated", OnEnemyDefeated);
 
 
 
-\### Call Broadcast to trigger all listeners of an event, passing the appropriate number of parameters:
+### Call Broadcast to trigger all listeners of an event, passing the appropriate number of parameters:
 
 
 
@@ -134,11 +134,11 @@ MessageBus.Broadcast("OnEnemyDefeated", "Orc", 100, true);
 
 
 
-\## Removing Listeners
+## Removing Listeners
 
 
 
-\### Remove a previously registered listener to stop receiving events:
+### Remove a previously registered listener to stop receiving events:
 
 
 
@@ -170,11 +170,11 @@ MessageBus.RemoveListener<string, int, bool>("OnEnemyDefeated", OnEnemyDefeated)
 
 
 
-\## Optional: Enable Tracing
+## Optional: Enable Tracing
 
 
 
-\### For debugging, enable tracing to log all broadcasts:
+### For debugging, enable tracing to log all broadcasts:
 
 
 
