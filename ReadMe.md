@@ -68,7 +68,7 @@ using ToolBox.Messaging;
 
 
 
-### Add a listener for an event by specifying the event name and a callback method. The callback can take 0–3 parameters of any type:
+ Add a listener for an event by specifying the event name and a callback method. The callback can take 0–3 parameters of any type:
 
 
 
@@ -102,7 +102,7 @@ MessageBus.AddListener<string, int, bool>("OnEnemyDefeated", OnEnemyDefeated);
 
 
 
-### Call Broadcast to trigger all listeners of an event, passing the appropriate number of parameters:
+ Call Broadcast to trigger all listeners of an event, passing the appropriate number of parameters:
 
 
 
@@ -138,7 +138,7 @@ MessageBus.Broadcast("OnEnemyDefeated", "Orc", 100, true);
 
 
 
-### Remove a previously registered listener to stop receiving events:
+ Remove a previously registered listener to stop receiving events:
 
 
 
@@ -174,7 +174,7 @@ MessageBus.RemoveListener<string, int, bool>("OnEnemyDefeated", OnEnemyDefeated)
 
 
 
-### For debugging, enable tracing to log all broadcasts:
+ For debugging, enable tracing to log all broadcasts:
 
 
 
